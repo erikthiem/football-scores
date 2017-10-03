@@ -4,6 +4,21 @@ import './App.css';
 
 class App extends Component {
 
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">College Football Scores</h1>
+        </header>
+        <Scores />
+			</div>
+    );
+  }
+}
+
+class Scores extends Component {
+
   constructor(props) {
     super(props);
 
@@ -31,17 +46,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">College Football Scores</h1>
-        </header>
+      <div>
         {this.state.listGames}
-			</div>
+      </div>
     );
   }
 }
-
 
 class ScoreBox extends Component {
 
